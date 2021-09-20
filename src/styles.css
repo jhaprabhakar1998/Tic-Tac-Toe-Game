@@ -1,0 +1,68 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.tic-tac-toe-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.board {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+  border: solid;
+}
+
+.board-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board-row {
+  border-bottom: solid;
+}
+
+.board-row:last-child {
+  border-bottom: none;
+}
+
+.board-cell {
+  align-self: stretch;
+  padding: 20px;
+  border-right: solid;
+  flex: 1;
+}
+
+.board-cell:last-child {
+  border-right: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .board-cell {
+    padding: 10px;
+  }
+}
